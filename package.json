@@ -2,7 +2,7 @@
   "name": "noited",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kamiheku.github.io/noited",
+  "homepage": "https://sdlwdr.github.io/noited",
   "dependencies": {
     "browser-fs-access": "^0.24.0",
     "fast-xml-parser": "^4.0.2",
