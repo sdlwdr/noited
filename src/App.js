@@ -37,6 +37,7 @@ const isStatsXml = (blob) =>
   blob.name.endsWith('stats.xml')
 
 function App () {
+  
   const canvasEl = useRef(null)
 
   const [sessions, setSessions] = useState(null)
@@ -71,7 +72,13 @@ function App () {
       ctx.strokeStyle = MARKER_STROKE_COLOR
       ctx.lineWidth = MARKER_STROKE_WIDTH
 
+      var i = 0.0;
+      const n_sessions = sessions.length;
       for (const session of sessions) {
+        var hue = (i / n_sessions)*360.0;
+        ctx.fillStyle = hsl(hue, 100, 100);
+        i += 1;
+        
         const { x, y } = session
         const imgCoords = convertCoords(x, y)
         ctx.beginPath()
